@@ -1,0 +1,64 @@
+.right-col
+  flex-grow: 2
+  flex-basis: auto
+
+.video-sidebar
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08)
+  border-radius: 2
+  margin-top: 10px
+  margin-bottom: 10px
+  background: #fff
+  max-width: 400px
+  ul
+    padding: 10px 10px 0
+    margin: 0 auto
+    li
+      //position: relative
+      height: 110px
+      width: auto
+      overflow: hidden
+      &:hover
+        .title
+          color: #167ac6
+
+.preview
+  display: flex
+  flex-flow: row
+  justify-content: flex-start
+
+.video-thumb
+  position: relative
+  overflow: hidden
+  .video-time
+    position: absolute
+    bottom: 5px
+    right: 0
+    padding: 0 4px
+    margin: 2px auto
+    font:
+      size: 11px
+      weight: bold
+    background-color: #000
+    color: #fff !important
+    opacity: 0.75
+
+.video-data
+  padding-top: 1px
+  margin-left: 5px
+  width: 200px
+  height: 94px
+  .user, .view-count,
+    margin: 2px 0
+    color: #767676
+    font-size: 11px
+  .title
+    margin: 4px 0
+    color: #252525
+    font:
+      size: 14px
+      weight: 700
+
+.video-sidebar-content
+  .show-more
+    margin: 0 10px
+    padding-bottom: 4px

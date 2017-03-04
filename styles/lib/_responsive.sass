@@ -1,0 +1,30 @@
+/** Page responsive settings **/
+.main
+  display: flex
+  flex-flow: row
+
+
+@media all and (max-width: 992px)
+  .video, .social, .info, .comments
+    margin-left: 0
+
+  .right-col
+    section
+      overflow: hidden
+
+@media all and (max-width: 768px)
+  .main
+    flex-direction: column
+
+  .video, .social, .info
+    margin: 10px 0
+
+  .comments
+    display: none
+
+  .right-col
+    section
+      margin: 0 0 10px
+      max-width: 100%
+      .title
+        //font-size: 1px

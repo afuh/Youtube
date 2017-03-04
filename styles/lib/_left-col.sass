@@ -1,0 +1,156 @@
+.left-col
+  flex-grow: 6
+  flex-basis: auto
+
+/****** Video ******/
+
+.video-section
+  max-width: 853px
+  margin-left: auto
+
+.video
+  margin: 10px
+  padding-bottom: 56.25%
+  padding-top: 30px
+  height: 0
+  position: relative
+  iframe
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    position: absolute
+
+/****** Social ******/
+
+.social, .info, .comments
+  background: #fff
+  margin: 10px
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08)
+  border-radius: 2
+  padding: 15px 15px 5px
+
+.social
+  display: flex
+  flex-flow: column
+
+.title-cont
+  h2
+    margin: 0 0 10px
+    color: #333
+    font:
+      size: 20px
+      weight: normal
+
+.user-views
+  display: flex
+  flex-flow: row
+  justify-content: space-between
+
+.user-cont
+  display: flex
+  flex-flow: row
+  padding: 5px 0
+
+.user-avatar
+  margin-right: 6px
+
+.user-name
+  padding-top: 2px
+  p
+    cursor: pointer
+    margin: 0
+    height: 22px
+    color: #333
+    font-weight: bold
+    &:hover
+      text-decoration: underline
+
+.subscribe-button
+  button
+    cursor: pointer
+    height: 20px
+    background: #e92117
+    color: #fefefe
+    border: solid 1px transparent
+    border-radius: 2px
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05)
+    font:
+      size: 11px
+      weight: 500
+    &:hover
+      background-color: #cc181e
+    &:focus
+      outline: none
+    &:active
+      background-color: #b31227
+
+.views
+  border-bottom: 2px solid #167ac6
+  color: #666
+  line-height: 24px
+  font-size: 19px
+  align-self: flex-end
+  p
+    margin: 0
+
+.share-cont
+  padding: 10px 0
+  border-top: 1px solid #e2e2e2
+  display: flex
+  flex-flow: row
+  justify-content: space-between
+
+.share, .likes
+  display: flex
+  flex-flow: row
+  align-self: center
+  p
+    vertical-align: middle
+    cursor: pointer
+    color: #767676
+    font:
+      size: 13px
+      weight: bold
+    &:hover
+      color: #4f4f4f
+
+.share
+  p
+    margin: 0 20px 0 0
+
+.likes
+  p
+    margin: 0 0 0 20px
+
+/****** Info ******/
+
+.video-description
+  margin-bottom: 20px
+  p
+    margin: 0 0 5px
+    color: #333
+    font:
+      size: 14px
+      weight: bold
+  a
+    color: #333
+    &:hover
+      color: #167ac6
+      text-decoration: underline
+
+.show-more
+  border-top: 1px solid #e2e2e2
+  cursor: pointer
+  padding-bottom: 10px
+  p
+    color: #767676
+    text:
+      align: center
+      transform: uppercase
+    font:
+      weight: bold
+      size: 11px
+
+
+/****** Comments ******/
