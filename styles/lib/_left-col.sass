@@ -106,7 +106,6 @@
   flex-flow: row
   align-self: center
   p
-    vertical-align: middle
     cursor: pointer
     color: #767676
     font:
@@ -142,7 +141,6 @@
 .show-more
   border-top: 1px solid #e2e2e2
   cursor: pointer
-  padding-bottom: 10px
   p
     color: #767676
     text:
@@ -154,3 +152,93 @@
 
 
 /****** Comments ******/
+
+.count
+  text-transform: uppercase
+  color: #555
+  font-weight: 500
+  margin-bottom: 8px
+
+.comments-button
+  margin: 20px auto
+  button
+    background: #f8f8f8
+    color: #333
+    height: 28px
+    border: solid 1px #d3d3d3
+    padding: 0 10px
+    cursor: pointer
+    border-radius: 2px
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05)
+    font:
+      weight: 500
+      size: 11px
+
+.comment
+  padding-left: 10px
+  textarea
+    resize: none
+    padding: 8px 8px 0
+    width: 100%
+    cursor: pointer
+    border: 1px solid #d5d5d5
+    border-radius: 2px
+
+.add-comment-cont
+  display: flex
+  flex-flow: row
+  padding: 5px 0
+
+.comment-cont
+  margin:
+    right: 10px
+    bottom: 30px
+    top: 10px
+  display: flex
+  flex-flow: row
+
+  .user-entry
+    line-height: 1.7em
+    flex-grow: 1
+    .name
+      a
+        color: #128ee9
+        font-weight: bold
+        line-height: 1.3em
+      p
+        color: #8a8a8a
+        font-size: 11px
+        padding: 0 5px
+        cursor: pointer
+        display: inline
+      a, p
+        &:hover
+          text-decoration: underline
+
+    .text
+      p
+        margin: 0
+
+    .footer
+      color: #8a8a8a
+      font-size: 13px
+      cursor: pointer
+      p
+        padding-right: 2px
+        display: inline
+        &:hover
+          color: #4f4f4f
+      span
+        padding: 0 2px
+        &:hover
+          color: #4f4f4f
+
+  .user-options
+    text-align: center
+    width: 20px
+    margin-right: 10px
+    color: #8a8a8a
+    font-size: 18px
+    cursor: pointer
+    &:hover
+      color: #4f4f4f

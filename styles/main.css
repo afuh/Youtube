@@ -23,6 +23,26 @@ header {
   background-color: yellow;
   display: block;
   min-height: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar, .youtube-menu, .sign-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.youtube-logo {
+  background: url("../images/logo1.png") no-repeat;
+  background-size: auto;
+  width: 73px;
+  height: 30px;
 }
 
 .left-col {
@@ -190,7 +210,6 @@ header {
 }
 
 .share p, .likes p {
-  vertical-align: middle;
   cursor: pointer;
   color: #767676;
   font-size: 13px;
@@ -233,7 +252,6 @@ header {
 .show-more {
   border-top: 1px solid #e2e2e2;
   cursor: pointer;
-  padding-bottom: 10px;
 }
 
 .show-more p {
@@ -245,6 +263,132 @@ header {
 }
 
 /****** Comments ******/
+.count {
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.comments-button {
+  margin: 20px auto;
+}
+
+.comments-button button {
+  background: #f8f8f8;
+  color: #333;
+  height: 28px;
+  border: solid 1px #d3d3d3;
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  font-size: 11px;
+}
+
+.comment {
+  padding-left: 10px;
+}
+
+.comment textarea {
+  resize: none;
+  padding: 8px 8px 0;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #d5d5d5;
+  border-radius: 2px;
+}
+
+.add-comment-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  padding: 5px 0;
+}
+
+.comment-cont {
+  margin-right: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+.comment-cont .user-entry {
+  line-height: 1.7em;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.comment-cont .user-entry .name a {
+  color: #128ee9;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+
+.comment-cont .user-entry .name p {
+  color: #8a8a8a;
+  font-size: 11px;
+  padding: 0 5px;
+  cursor: pointer;
+  display: inline;
+}
+
+.comment-cont .user-entry .name a:hover, .comment-cont .user-entry .name p:hover {
+  text-decoration: underline;
+}
+
+.comment-cont .user-entry .text p {
+  margin: 0;
+}
+
+.comment-cont .user-entry .footer {
+  color: #8a8a8a;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.comment-cont .user-entry .footer p {
+  padding-right: 2px;
+  display: inline;
+}
+
+.comment-cont .user-entry .footer p:hover {
+  color: #4f4f4f;
+}
+
+.comment-cont .user-entry .footer span {
+  padding: 0 2px;
+}
+
+.comment-cont .user-entry .footer span:hover {
+  color: #4f4f4f;
+}
+
+.comment-cont .user-options {
+  text-align: center;
+  width: 20px;
+  margin-right: 10px;
+  color: #8a8a8a;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.comment-cont .user-options:hover {
+  color: #4f4f4f;
+}
+
 .right-col {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
@@ -354,6 +498,9 @@ header {
 }
 
 @media all and (max-width: 768px) {
+  .youtube-logo {
+    background: url("../images/logo2.png") no-repeat;
+  }
   .main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

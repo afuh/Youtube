@@ -12,15 +12,29 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="styles/main.css" type="text/css" rel="stylesheet">
 
-  <!--<script src="js/main.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
 </head>
 <body>
 
-  <header>Navbar</header>
+  <header class="navbar">
+      <div class="youtube-menu">
+        <button type="button"><i class="fa fa-bars"></i></button>
+        <span class="youtube-logo"></span>
+      </div>
+      <div class="search-box">
+        <input type="text" name="searchinput">
+        <button type="button"><i class="fa fa-search"></i></button>
+      </div>
+      <div class="sign-in">
+        <span><i class="fa fa-upload" aria-hidden="true"></i></span>
+        <button type="button">Sign in</button>
+      </div>
+  </header>
 
   <div class="main">
 
-
+<!-- //// LEFT COLUMN VIDEO COMMENTS////  -->
     <div class="left-col">
       <section class="video-section">
         <div class="video">
@@ -58,6 +72,7 @@
             </div>
           </div>
         </div>
+
         <div class="info">
           <div class="video-description">
             <p>Uploaded on 2 Aug 2010</p>
@@ -67,12 +82,28 @@
             <p>show more</p>
           </div>
         </div>
-        <div class="comments">comments</div>
+
+        <div class="comments">
+          <div class="count">Comments • 93</div>
+          <div class="add-comment-cont">
+            <div class="user-avatar">
+              <img src="images/anonymous-avatar.png" alt="Abel Flaubert">
+            </div>
+            <div class="comment">
+              <textarea class="textarea" rows="3" cols="122" placeholder="Add a public comment..."></textarea>
+            </div>
+          </div>
+          <hr class="show-more">
+          <div class="comments-button">
+            <button type="button">Top comments <i class="fa fa-caret-down"></i></button>
+          </div>
+          <div id="comments" class="comment-list"></div> <!-- /// comments.html ///-->
+          <div class="show-more">
+            <p>show more</p>
+          </div>
+        </div>
       </section>
     </div>
-
-
-
 
 <!-- //// RIGHT COLUMN VIDEO LIST////  -->
     <div class="right-col">
@@ -194,7 +225,9 @@
 
   </div> <!-- end main section -->
 
-  <footer>footer</footer>
+  <footer>
+    <div class="settings"></div>
+  </footer>
 
 
 
