@@ -1,5 +1,4 @@
-"use strict";
-
 $(function () {
-  return $("#comments").load("comments.html");
+  $("#comments").load("_comments.html");
+  $("#video-list").load("_video-list.html");
 });

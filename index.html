@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="shortcut icon" href="https://s.ytimg.com/yts/img/favicon-vflz7uhzw.ico" type="image/x-icon">
 
-  <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet prefetch">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="styles/main.css" type="text/css" rel="stylesheet">
@@ -17,22 +16,22 @@
 </head>
 <body>
 
-  <header class="navbar">
-      <div class="youtube-menu">
-        <button type="button"><i class="fa fa-bars"></i></button>
+  <header class="header container flex-row">
+      <div class="youtube-menu flex-row">
+        <button class="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
         <span class="youtube-logo"></span>
       </div>
-      <div class="search-box">
-        <input type="text" name="searchinput">
-        <button type="button"><i class="fa fa-search"></i></button>
+      <div class="search-box flex-row">
+        <input type="text" name="searchinput" placeholder="Search">
+        <button class="button" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
       </div>
-      <div class="sign-in">
-        <span><i class="fa fa-upload" aria-hidden="true"></i></span>
-        <button type="button">Sign in</button>
+      <div class="sign-in flex-row">
+        <button class="upload"><i class="fa fa-upload" aria-hidden="true"></i></button>
+        <button class="button" type="button">Sign in</button>
       </div>
   </header>
 
-  <div class="main">
+  <div class="main flex-row">
 
 <!-- //// LEFT COLUMN VIDEO COMMENTS////  -->
     <div class="left-col">
@@ -40,19 +39,19 @@
         <div class="video">
           <iframe width="853" height="480" src="https://www.youtube.com/embed/_CLbWAxH2WY?ecver=1" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="social">
+        <div class="social container flex-col">
           <div class="title-cont">
             <h2>iPad / Launchpad</h2>
           </div>
-          <div class="user-views">
-            <div class="user-cont">
+          <div class="user-views flex-row">
+            <div class="user-cont flex-row">
               <div class="user-avatar">
                 <img src="images/avatar.jpg" alt="Abel Flaubert">
               </div>
               <div class="user-name">
                 <p>Abel Flaubert</p>
                 <div class="subscribe-button">
-                  <button type="button"><i class="fa fa-youtube-play"></i> Subscribe</button>
+                  <button class="button" type="button"><i class="fa fa-youtube-play" aria-hidden="true"></i> Subscribe</button>
                 </div>
               </div>
             </div>
@@ -60,20 +59,20 @@
               <p>103,473 views</p>
             </div>
           </div>
-          <div class="share-cont">
-            <div class="share">
-              <p><i class="fa fa-plus"></i> Add to</p>
-              <p><i class="fa fa-share"></i> Share</p>
-              <p><i class="fa fa-ellipsis-h"></i> More</p>
+          <div class="share-cont flex-row">
+            <div class="share flex-row">
+              <p><i class="fa fa-plus" aria-hidden="true"></i> Add to</p>
+              <p><i class="fa fa-share" aria-hidden="true"></i> Share</p>
+              <p><i class="fa fa-ellipsis-h" aria-hidden="true"></i> More</p>
             </div>
-            <div class="likes">
-              <p><i class="fa fa-thumbs-up"></i> 778</p>
-              <p><i class="fa fa-thumbs-down"></i> 13</p>
+            <div class="likes flex-row">
+              <p><i class="fa fa-thumbs-up" aria-hidden="true"></i> 778</p>
+              <p><i class="fa fa-thumbs-down" aria-hidden="true"></i> 13</p>
             </div>
           </div>
         </div>
 
-        <div class="info">
+        <div class="info container">
           <div class="video-description">
             <p>Uploaded on 2 Aug 2010</p>
             <a href="#">http://www.facebook.com/abelflaubert</a>
@@ -83,9 +82,9 @@
           </div>
         </div>
 
-        <div class="comments">
+        <div class="comments container">
           <div class="count">Comments • 93</div>
-          <div class="add-comment-cont">
+          <div class="add-comment-cont flex-row">
             <div class="user-avatar">
               <img src="images/anonymous-avatar.png" alt="Abel Flaubert">
             </div>
@@ -95,9 +94,11 @@
           </div>
           <hr class="show-more">
           <div class="comments-button">
-            <button type="button">Top comments <i class="fa fa-caret-down"></i></button>
+            <button class="button" type="button">Top comments <i class="fa fa-caret-down" aria-hidden="true"></i></button>
           </div>
-          <div id="comments" class="comment-list"></div> <!-- /// comments.html ///-->
+          <div id="comments" class="comment-list">
+            <!-- /// comments.html ///-->
+          </div>
           <div class="show-more">
             <p>show more</p>
           </div>
@@ -107,129 +108,44 @@
 
 <!-- //// RIGHT COLUMN VIDEO LIST////  -->
     <div class="right-col">
-      <section class="video-sidebar">
-        <div class="video-sidebar-content">
-          <ul>
-            <li>
-              <a class="preview" href="#">
-                <div class="video-thumb">
-                  <img src="images/vid0.jpg" alt="Pasto in action">
-                  <p class="video-time">1:42</p>
-                </div>
-                <div class="video-data">
-                  <h4 class="title">Pasto in action</h4>
-                  <p class="user">Abel Flaubert</p>
-                  <p class="view-count">1,656 views</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="preview" href="#">
-                <div class="video-thumb">
-                  <img src="images/vid1.jpg" alt="PASTO is here!">
-                  <p class="video-time">1:37</p>
-                </div>
-                <div class="video-data">
-                  <h4 class="title">PASTO is here!</h4>
-                  <p class="user">Abel Flaubert</p>
-                  <p class="view-count">10,643 views</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="preview" href="#">
-                <div class="video-thumb">
-                  <img src="images/vid4.jpg" alt="Launchpad  + 7up">
-                  <p class="video-time">5:46</p>
-                </div>
-                <div class="video-data">
-                  <h4 class="title">Launchpad  + 7up</h4>
-                  <p class="user">Abel Flaubert</p>
-                  <p class="view-count">11,006 views</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="preview" href="#">
-                <div class="video-thumb">
-                  <img src="images/vid2.jpg" alt="Novation Launchpad and Bach">
-                  <p class="video-time">2:08</p>
-                </div>
-                <div class="video-data">
-                  <h4 class="title">Novation Launchpad and Bach</h4>
-                  <p class="user">Abel Flaubert</p>
-                  <p class="view-count">43,200 views</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="preview" href="#">
-                <div class="video-thumb">
-                  <img src="images/vid5.jpg" alt="Four Cities Sextet - Resaca">
-                  <p class="video-time">4:13</p>
-                </div>
-                <div class="video-data">
-                  <h4 class="title">Four Cities Sextet - Resaca</h4>
-                  <p class="user">Abel Flaubert</p>
-                  <p class="view-count">1,137 views</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="preview" href="#">
-                <div class="video-thumb">
-                  <img src="images/vid6.jpg" alt="Music for a found Launchpad">
-                  <p class="video-time">4:27</p>
-                </div>
-                <div class="video-data">
-                  <h4 class="title">Music for a found Launchpad</h4>
-                  <p class="user">Abel Flaubert</p>
-                  <p class="view-count">8,379 views</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="preview" href="#">
-                <div class="video-thumb">
-                  <img src="images/vid7.jpg" alt="No-iPad-Pasto: First long duration test.">
-                  <p class="video-time">2:28</p>
-                </div>
-                <div class="video-data">
-                  <h4 class="title">No-iPad-Pasto: First long duration test.</h4>
-                  <p class="user">Abel Flaubert</p>
-                  <p class="view-count">689 views</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a class="preview" href="#">
-                <div class="video-thumb">
-                  <img src="images/vid8.jpg" alt="Novation Launchpad Tetris">
-                  <p class="video-time">1:46</p>
-                </div>
-                <div class="video-data">
-                  <h4 class="title">Novation Launchpad Tetris</h4>
-                  <p class="user">Abel Flaubert</p>
-                  <p class="view-count">22,505 views</p>
-                </div>
-              </a>
-            </li>
-          </ul>
+      <section class="video-sidebar container">
+        <div id="video-list" class="video-sidebar-content">
+          <!-- /// video-list.html ///-->
+        </div>
           <div class="show-more">
             <p>show more</p>
           </div>
-        </div>
       </section>
     </div>
 
-
   </div> <!-- end main section -->
 
-  <footer>
-    <div class="settings"></div>
+  <footer class="footer container flex-col">
+    <div class="settings flex-row">
+      <span class="youtube-logo"></span>
+      <button class="button" type="button">Language: <b>English (UK)</b> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+      <button class="button" type="button">Content location: <b>Germany</b> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+      <button class="button" type="button">Restricted Mode: <b>Off</b> <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+      <button class="button" type="button"><i class="fa fa-hourglass-end" aria-hidden="true"></i> History</button>
+      <button class="button" type="button"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</button>
+    </div>
+    <div class="about flex-row">
+      <a href="#">About</a>
+      <a href="#">Press</a>
+      <a href="#">Copyright</a>
+      <a href="#">Creators</a>
+      <a href="#">Advertise</a>
+      <a href="#">Developers</a>
+      <a href="#">+YouTube</a>
+    </div>
+    <div class="policy flex-row">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Policy & Safety</a>
+      <a href="#">Send feedback</a>
+      <a href="#">Test new features</a>
+    </div>
   </footer>
-
-
 
 </body>
 </html>

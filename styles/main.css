@@ -19,16 +19,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-header {
-  background-color: yellow;
-  display: block;
-  min-height: 40px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.navbar, .youtube-menu, .sign-in {
+.flex-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,14 +29,186 @@ header {
           flex-direction: row;
 }
 
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  background: #fff;
+  margin: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  border-radius: 2;
+  padding: 15px 15px 5px;
+}
+
+.button {
+  background: #f8f8f8;
+  color: #333;
+  height: 28px;
+  border: solid 1px #d3d3d3;
+  border-radius: 2px;
+  padding: 0 8px;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  font-size: 11px;
+}
+
+.button:hover {
+  border-color: #c6c6c6;
+  background: #f0f0f0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.button:focus {
+  box-shadow: none;
+  outline: 0;
+}
+
+.button:active {
+  background: #e9e9e9;
+  box-shadow: inset 0 1px 0 #ddd;
+}
+
+.show-more {
+  border-top: 1px solid #e2e2e2;
+  cursor: pointer;
+}
+
+.show-more p {
+  color: #8a8a8a;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.show-more:hover p {
+  color: #4f4f4f;
+}
+
+hr {
+  cursor: default !important;
+}
+
+header {
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  margin: 0 !important;
+  min-height: 40px;
+}
+
+.header, .youtube-menu, .search-box, .sign-in {
+  padding: 5px;
+}
+
+.youtube-menu {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar, .upload {
+  background: transparent;
+  border: 0;
+  height: 100%;
+  width: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #8a8a8a;
+}
+
+.navbar:hover, .upload:hover {
+  color: #4f4f4f;
+}
+
+.navbar:focus, .upload:focus {
+  outline: 0;
+}
+
 .youtube-logo {
   background: url("../images/logo1.png") no-repeat;
   background-size: auto;
   width: 73px;
   height: 30px;
+  cursor: pointer;
+}
+
+.search-box {
+  -webkit-box-flex: 6;
+      -ms-flex-positive: 6;
+          flex-grow: 6;
+}
+
+.search-box input {
+  height: 30px;
+  padding: 2px 6px;
+  background: #fff;
+  font-size: 14px;
+  width: 100%;
+  border: 1px  solid #ccc;
+  box-shadow: inset 0 1px 2px #eee;
+  -webkit-transition: border-color .2s ease;
+  transition: border-color .2s ease;
+}
+
+.search-box input:focus {
+  outline: 0;
+  border: 1px solid #167ac6;
+}
+
+.search-box .button {
+  width: 70px;
+  height: 30px;
+  border-left: red;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.sign-in {
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign-in .button {
+  background: #167ac6;
+  border-color: #167ac6;
+  color: #fff;
+  height: 30px;
+  white-space: nowrap;
+}
+
+.sign-in .button:hover {
+  background: #126db3;
+}
+
+.sign-in .button:active {
+  background: #095b99;
+  box-shadow: none;
 }
 
 .left-col {
+  margin-top: 50px;
   -webkit-box-flex: 6;
       -ms-flex-positive: 6;
           flex-grow: 6;
@@ -76,24 +239,6 @@ header {
 }
 
 /****** Social ******/
-.social, .info, .comments {
-  background: #fff;
-  margin: 10px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-  border-radius: 2;
-  padding: 15px 15px 5px;
-}
-
-.social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-}
-
 .title-cont h2 {
   margin: 0 0 10px;
   color: #333;
@@ -102,26 +247,12 @@ header {
 }
 
 .user-views {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .user-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
   padding: 5px 0;
 }
 
@@ -145,33 +276,29 @@ header {
   text-decoration: underline;
 }
 
-.subscribe-button button {
-  cursor: pointer;
+.subscribe-button .button {
   height: 20px;
   background: #e92117;
   color: #fefefe;
   border: solid 1px transparent;
-  border-radius: 2px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-  font-size: 11px;
-  font-weight: 500;
 }
 
-.subscribe-button button:hover {
+.subscribe-button .button:hover {
   background-color: #cc181e;
 }
 
-.subscribe-button button:focus {
+.subscribe-button .button:focus {
   outline: none;
 }
 
-.subscribe-button button:active {
+.subscribe-button .button:active {
   background-color: #b31227;
+  box-shadow: none;
 }
 
 .views {
   border-bottom: 2px solid #167ac6;
-  color: #666;
+  color: #4f4f4f;
   line-height: 24px;
   font-size: 19px;
   -ms-flex-item-align: end;
@@ -185,33 +312,20 @@ header {
 .share-cont {
   padding: 10px 0;
   border-top: 1px solid #e2e2e2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .share, .likes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
 }
 
 .share p, .likes p {
   cursor: pointer;
-  color: #767676;
+  color: #8a8a8a;
   font-size: 13px;
   font-weight: bold;
 }
@@ -249,19 +363,6 @@ header {
   text-decoration: underline;
 }
 
-.show-more {
-  border-top: 1px solid #e2e2e2;
-  cursor: pointer;
-}
-
-.show-more p {
-  color: #767676;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 11px;
-}
-
 /****** Comments ******/
 .count {
   text-transform: uppercase;
@@ -271,20 +372,7 @@ header {
 }
 
 .comments-button {
-  margin: 20px auto;
-}
-
-.comments-button button {
-  background: #f8f8f8;
-  color: #333;
-  height: 28px;
-  border: solid 1px #d3d3d3;
-  padding: 0 10px;
-  cursor: pointer;
-  border-radius: 2px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-  font-weight: 500;
-  font-size: 11px;
+  margin: 15px auto;
 }
 
 .comment {
@@ -301,13 +389,6 @@ header {
 }
 
 .add-comment-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
   padding: 5px 0;
 }
 
@@ -315,13 +396,6 @@ header {
   margin-right: 10px;
   margin-bottom: 30px;
   margin-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
 }
 
 .comment-cont .user-entry {
@@ -390,6 +464,7 @@ header {
 }
 
 .right-col {
+  margin-top: 50px;
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
@@ -398,11 +473,7 @@ header {
 }
 
 .video-sidebar {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-  border-radius: 2;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background: #fff;
+  margin: 10px 0;
   max-width: 400px;
 }
 
@@ -422,19 +493,13 @@ header {
 }
 
 .preview {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
 .video-thumb {
+  min-width: 168px;
   position: relative;
   overflow: hidden;
 }
@@ -461,33 +526,66 @@ header {
 
 .video-data .user, .video-data .view-count {
   margin: 2px 0;
-  color: #767676;
+  color: #8a8a8a;
   font-size: 11px;
 }
 
 .video-data .title {
   margin: 4px 0;
-  color: #252525;
+  color: #333;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
-.video-sidebar-content .show-more {
-  margin: 0 10px;
-  padding-bottom: 4px;
+footer {
+  margin: 50px 0 0 !important;
+  padding-left: 40px !important;
+  padding-bottom: 20px !important;
+}
+
+.settings {
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 15px;
+}
+
+.settings span, .settings button {
+  margin: auto 8px;
+  white-space: nowrap;
+}
+
+.settings span i, .settings button i {
+  color: #8a8a8a;
+}
+
+.about a, .policy a {
+  margin: auto 10px;
+  font-weight: bold;
+}
+
+.about a:hover, .policy a:hover {
+  color: #167ac6;
+  text-decoration: underline;
+}
+
+.about {
+  margin-top: 15px;
+}
+
+.about a {
+  color: #333;
+  font-size: 14px;
+}
+
+.policy {
+  margin-top: 10px;
+}
+
+.policy a {
+  color: #8a8a8a;
+  font-size: 11px;
 }
 
 /** Page responsive settings **/
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-}
-
 @media all and (max-width: 992px) {
   .video, .social, .info, .comments {
     margin-left: 0;
@@ -495,11 +593,21 @@ header {
   .right-col section {
     overflow: hidden;
   }
-}
-
-@media all and (max-width: 768px) {
   .youtube-logo {
     background: url("../images/logo2.png") no-repeat;
+    width: 40px;
+  }
+}
+
+@media all and (max-width: 780px) {
+  .right-col {
+    margin-top: 0;
+  }
+  .search-box .button {
+    width: 40px;
+  }
+  .sign-in .upload {
+    display: none;
   }
   .main {
     -webkit-box-orient: vertical;
@@ -517,10 +625,7 @@ header {
     margin: 0 0 10px;
     max-width: 100%;
   }
-}
-
-footer {
-  background-color: yellow;
-  display: block;
-  min-height: 90px;
+  .footer {
+    display: none;
+  }
 }

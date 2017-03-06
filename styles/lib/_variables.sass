@@ -1,8 +1,14 @@
+$black: #333
+$gray: #8a8a8a
+$hovergray: #4f4f4f
+$link: #167ac6
+$shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08)
+
 *
   box-sizing: border-box
   list-style-type: none
   text-decoration: none
-  
+
 body
   margin: 0
   padding: 0
@@ -14,3 +20,59 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button
   appearance: none
   margin: 0
+
+.flex-row
+  display: flex
+  flex-direction: row
+
+.flex-col
+  display: flex
+  flex-direction: column
+
+.container
+  background: #fff
+  margin: 10px
+  box-shadow: $shadow
+  border-radius: 2
+  padding: 15px 15px 5px
+
+.button
+  background: #f8f8f8
+  color: $black
+  height: 28px
+  border: solid 1px #d3d3d3
+  border-radius: 2px
+  padding: 0 8px
+  cursor: pointer
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05)
+  font:
+    weight: 500
+    size: 11px
+  &:hover
+    border-color: #c6c6c6
+    background: #f0f0f0
+    box-shadow: 0 1px 0 rgba(0,0,0,0.10)
+  &:focus
+    box-shadow: none
+    outline: 0
+  &:active
+    background: #e9e9e9
+    box-shadow: inset 0 1px 0 #ddd
+
+.show-more
+  border-top: 1px solid #e2e2e2
+  cursor: pointer
+  p
+    color: $gray
+    text:
+      align: center
+      transform: uppercase
+    font:
+      weight: bold
+      size: 11px
+  &:hover
+    p
+      color: $hovergray
+
+hr
+  cursor: default !important

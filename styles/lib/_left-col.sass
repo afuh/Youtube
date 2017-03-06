@@ -1,4 +1,5 @@
 .left-col
+  margin-top: 50px
   flex-grow: 6
   flex-basis: auto
 
@@ -23,33 +24,18 @@
 
 /****** Social ******/
 
-.social, .info, .comments
-  background: #fff
-  margin: 10px
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08)
-  border-radius: 2
-  padding: 15px 15px 5px
-
-.social
-  display: flex
-  flex-flow: column
-
 .title-cont
   h2
     margin: 0 0 10px
-    color: #333
+    color: $black
     font:
       size: 20px
       weight: normal
 
 .user-views
-  display: flex
-  flex-flow: row
   justify-content: space-between
 
 .user-cont
-  display: flex
-  flex-flow: row
   padding: 5px 0
 
 .user-avatar
@@ -61,33 +47,28 @@
     cursor: pointer
     margin: 0
     height: 22px
-    color: #333
+    color: $black
     font-weight: bold
     &:hover
       text-decoration: underline
 
 .subscribe-button
-  button
-    cursor: pointer
+  .button
     height: 20px
     background: #e92117
     color: #fefefe
     border: solid 1px transparent
-    border-radius: 2px
-    box-shadow: 0 1px 0 rgba(0,0,0,0.05)
-    font:
-      size: 11px
-      weight: 500
     &:hover
       background-color: #cc181e
     &:focus
       outline: none
     &:active
       background-color: #b31227
+      box-shadow: none
 
 .views
-  border-bottom: 2px solid #167ac6
-  color: #666
+  border-bottom: 2px solid $link
+  color: $hovergray
   line-height: 24px
   font-size: 19px
   align-self: flex-end
@@ -97,22 +78,18 @@
 .share-cont
   padding: 10px 0
   border-top: 1px solid #e2e2e2
-  display: flex
-  flex-flow: row
   justify-content: space-between
 
 .share, .likes
-  display: flex
-  flex-flow: row
   align-self: center
   p
     cursor: pointer
-    color: #767676
+    color: $gray
     font:
       size: 13px
       weight: bold
     &:hover
-      color: #4f4f4f
+      color: $hovergray
 
 .share
   p
@@ -128,28 +105,15 @@
   margin-bottom: 20px
   p
     margin: 0 0 5px
-    color: #333
+    color: $black
     font:
       size: 14px
       weight: bold
   a
-    color: #333
+    color: $black
     &:hover
-      color: #167ac6
+      color: $link
       text-decoration: underline
-
-.show-more
-  border-top: 1px solid #e2e2e2
-  cursor: pointer
-  p
-    color: #767676
-    text:
-      align: center
-      transform: uppercase
-    font:
-      weight: bold
-      size: 11px
-
 
 /****** Comments ******/
 
@@ -160,19 +124,7 @@
   margin-bottom: 8px
 
 .comments-button
-  margin: 20px auto
-  button
-    background: #f8f8f8
-    color: #333
-    height: 28px
-    border: solid 1px #d3d3d3
-    padding: 0 10px
-    cursor: pointer
-    border-radius: 2px
-    box-shadow: 0 1px 0 rgba(0,0,0,0.05)
-    font:
-      weight: 500
-      size: 11px
+  margin: 15px auto
 
 .comment
   padding-left: 10px
@@ -185,8 +137,6 @@
     border-radius: 2px
 
 .add-comment-cont
-  display: flex
-  flex-flow: row
   padding: 5px 0
 
 .comment-cont
@@ -194,8 +144,6 @@
     right: 10px
     bottom: 30px
     top: 10px
-  display: flex
-  flex-flow: row
 
   .user-entry
     line-height: 1.7em
@@ -206,7 +154,7 @@
         font-weight: bold
         line-height: 1.3em
       p
-        color: #8a8a8a
+        color: $gray
         font-size: 11px
         padding: 0 5px
         cursor: pointer
@@ -220,25 +168,25 @@
         margin: 0
 
     .footer
-      color: #8a8a8a
+      color: $gray
       font-size: 13px
       cursor: pointer
       p
         padding-right: 2px
         display: inline
         &:hover
-          color: #4f4f4f
+          color: $hovergray
       span
         padding: 0 2px
         &:hover
-          color: #4f4f4f
+          color: $hovergray
 
   .user-options
     text-align: center
     width: 20px
     margin-right: 10px
-    color: #8a8a8a
+    color: $gray
     font-size: 18px
     cursor: pointer
     &:hover
-      color: #4f4f4f
+      color: $hovergray

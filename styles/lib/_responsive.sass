@@ -1,8 +1,4 @@
 /** Page responsive settings **/
-.main
-  display: flex
-  flex-flow: row
-
 
 @media all and (max-width: 992px)
   .video, .social, .info, .comments
@@ -12,9 +8,21 @@
     section
       overflow: hidden
 
-@media all and (max-width: 768px)
   .youtube-logo
     background: url("../images/logo2.png") no-repeat
+    width: 40px
+
+@media all and (max-width: 780px)
+  .right-col
+    margin-top: 0
+
+  .search-box
+    .button
+      width: 40px
+
+  .sign-in
+    .upload
+      display: none
 
   .main
     flex-direction: column
@@ -29,5 +37,6 @@
     section
       margin: 0 0 10px
       max-width: 100%
-      .title
-        //font-size: 1px
+
+  .footer
+    display: none
