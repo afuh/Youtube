@@ -207,13 +207,13 @@ header {
   box-shadow: none;
 }
 
+/** Main conteiner **/
+div.main {
+ justify-content: center;
+}
+
 .left-col {
   margin-top: 50px;
-  -webkit-box-flex: 6;
-      -ms-flex-positive: 6;
-          flex-grow: 6;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
 }
 
 /****** Video ******/
@@ -465,11 +465,6 @@ header {
 
 .right-col {
   margin-top: 50px;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
 }
 
 .video-sidebar {
